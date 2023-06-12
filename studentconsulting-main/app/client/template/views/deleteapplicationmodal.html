@@ -1,0 +1,20 @@
+<!-- Modal för att ta bort sin ansökan, frågar en extra gång -->
+<div class="modal fade" id="deleteappModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Bekräfta att ansökan tas bort</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Vill du verkligen ta bort din ansökan? Genväg till ansökan tas bort från din sida och företaget kommer inte längre ha tillgång till din ansökan. 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Avbryt</button>
+          <button type="button" class="btn btn-primary" id="modal_delete_application_button" onclick="apply_delete_job(this.id)">Ta bort Ansökan</button>
+        </div>
+      </div>
+    </div>
+  </div>

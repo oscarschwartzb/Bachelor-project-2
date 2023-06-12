@@ -1,0 +1,109 @@
+<!-- Vy för förstasida -->
+<script id="view-index" type="text/html">
+    <div id="promo">
+        <div class="jumbotron" style="display: flex; justify-content: center; border-radius: 0px; background: url( {{url_for('static', filename='img/first-page-picture.jpg') }} ); background-size: cover; filter: blur(0px);   background-attachment: fixed; height: 550px;">
+
+            <div class="container" style="height: 200px; margin-top: 70px;">
+                <!-- Denna div visas när användaren inte är inloggad -->
+                <div class="column" id="show_not_login" style="display: flex; flex-direction: column; justify-content: center; height: 100;">
+                    <div class="col-md-6" style="text-align: start;">
+                        <h1 id="first-header" style="color: #133e69; text-align: start;">Är du student och söker konsultjobb?</h1>
+                        <p class="firstpage-paragraph" , style="color: #133e69;">Grattis, just nu finns det<button style="background: none;  color: #133e69;
+                                     border: none; font-weight: bold; font-size: larger;" id="number_jobs"> {{numberofjobs}} </button>lediga jobb.</p>
+                        <a class="btn btn-primary" role="button" onclick="register_student_function()" id="index_first">Registera din studentprofil</a>
+                    </div>
+                    <div class="col-md-6" style="text-align: start;">
+                        <h1 style="color: #133e69; text-align: start; width: 400px; margin-top: 30px;">Söker du studentkonsulter?</h1>
+                        <p class="firstpage-paragraph" style="color: #133e69;">Grattis, just nu finns det<button style="background: none; color: #133e69;
+                                     border: none; font-weight: bold; font-size: larger;"> {{numberofstudents}} </button>studenter som letar konsultjobb.</p>
+                        <a class="btn btn-primary" role="button" onclick="register_company_function()" id="index_second">Registrera ditt företag</a>
+
+                    </div>
+                </div>
+                <!-- Denna div visas när användaren är inloggad -->
+                <div class="column" id="show_login" style="display: flex; flex-direction: column; justify-content: center; height: 100;">
+                    <div class="col-md-6" style="text-align: start;">
+                        <h1 id="welcome-header" style="color: #133e69; text-align: start;"></h1>
+                        <p class="firstpage-paragraph" , style="color: #133e69;">Grattis, just nu finns det<button style="background: none; color: #133e69;
+                                     border: none; font-weight: bold; font-size: larger;" id="number_jobs"> {{numberofjobs}} </button>konsultjobb publicerade.</p>
+                        <a class="btn btn-primary" role="button" onclick="myPage()" id="index_first">Här kommer du till din sida:</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="frontpage-reviews">
+            <div id="frontpage-reviews-container">
+                <p style="text-align: center; margin-top: 10px;"> En student har precis fått jobb på Tesla!</p>
+
+                <div class="div-review-style" style="display: flex; flex-direction: row; justify-content: space-between; width: 180px;  height: 100%; align-items: center;">
+                    <h1 class="header-review-style" style="display: flex; flex-direction: column; justify-content: center;  height: 100%;  margin-top: 40px">4.1</h1>
+                    <div class="frontpage-reviews-container-container">
+                        <p> Betyg Google</p>
+                        <div class="frontpage-stars-container">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-review-style" style="width: 300px;">
+                    <h1 class="header-review-style">{{numberofjobs}}</h1>
+                    <i class="fas fa-briefcase" style="margin-left:10px; margin-right:0px; color: orange; font-size: 50px;"></i>
+                    <p style="margin-top: 23px; margin-left:10px">Jobb just nu</p>
+                </div>
+
+                <div class="div-review-style" style="width: 300px;">
+                    <h1 class="header-review-style">{{numberofstudents}}</h1>
+                    <i class="fas fa-graduation-cap" style="margin-left:10px; margin-right:0px; color: orange; font-size: 50px;"></i>
+                    <p style="margin-top: 23px; margin-left:10px">Studenter just nu</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+
+
+    <section class="features-clean">
+        <div class="container">
+            <div class="intro"></div>
+            <div class="row features" style="height: 133px;">
+                <div class="col-sm-6 col-lg-4 item"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16" style="margin: -6px 0px 0px -45px;
+                    color: #29648A;
+                    float: left;">
+                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
+                  </svg>
+                    <!-- <i class="fa fa-map-marker icon" style="margin: -6px 0px 0px -40px; color:#29648A" ></i> -->
+                    <h3 class="name">Prisvärt</h3>
+                    <p class="description">Vi erbjuder en kostnadsfri tjänst för studenter och förmedlar prisvärd arbetskraft åt företag.</p>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-clock-o icon" style="margin: -6px 0px 0px -50px; color:#29648A"></i>
+                    <h3 class="name">Effektivt</h3>
+                    <p class="description">Genom enkla annonser skapar vi förutsättningar för snabba och smidiga anställningar på ett enkelt och kvalitetsäkrat sätt.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-list-alt icon" style="margin: -5px 0px 0px -52px; color:#29648A"></i>
+                    <h3 class="name">Meriterande </h3>
+                    <p class="description">Genom att arbeta inom olika branscher kan du som student skaffa goda arbetslivserfarenheter och bygga ett konkurrenskraftigt CV.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h1>Upptäck lediga konsultjobb</h1>
+
+    <div class="container-fluid" id="job-slider">
+        <div id="jobs-homepage" class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
+            <!--onclick="register_student_function()-->
+        </div>
+    </div>
+
+
+
+</script>

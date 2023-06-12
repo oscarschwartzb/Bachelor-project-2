@@ -1,0 +1,76 @@
+<!-- Vy fö?r att redigera fö?retagsprofil -->
+<script id="view-editcompanyprofile" type= "text/html"> 
+    <div
+    class="profile-background"
+    style="background-image: linear-gradient(WhiteSmoke, White);"
+  >
+
+    <div class="profile_first"></div>
+    <img src={{ url_for('static', filename='img/BCG_Corporate_Logo.svg.png') }} width="150px"
+    height="150px" style="border-radius:75px; box-shadow: 0 4px 8px rgba(0,0,0,.1); border: solid thin white;">
+    <h1 class="Areaheader" id="company_name"></h1>
+    
+
+    
+    <div class="container-fluid" id="job-slider" style = "padding-right: 0px; padding-left: 0px;">
+     
+      <div
+        class="row"
+        style="background-color:whitesmoke; width: 100%; height: 600px; border-top: solid thin gainsboro; display: flex; justify-content: space-evenly;"
+      >
+        <!--kanske måste byta id så kort kommer in i ny div namn id?-->
+        <div 
+          class="col_student"
+          id="company-job-card-div" 
+          style="float: left; width: 50%;  background-color:White; border-radius: 15px; margin-top:20px; margin-bottom:20px; overflow:scroll; height:530px"
+        >
+          <h1
+            class="text-center"
+            style="margin-top: 10px; margin-bottom: 10px; font-size: 35px"
+          >
+            Dina upplagda jobb ligger i din profil.
+          </h1>
+        </div>
+
+
+        <div class="col_student" id="col_company_div"style="float:left; width:35%; background-color:White; border-radius: 15px;  margin-left:30px; margin-top:20px; margin-bottom:20px; height:65%; ">
+          
+          <div id="companyinfoinner" style="margin: 10px">
+            
+            <div id="company_info_header_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
+                    <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
+                  </svg>
+                  <h2 style = "margin-top: 0px;" > Om Företag</h2>
+                  
+            </div>
+
+             <div class="row" >
+                           
+                            <div class="col" style=" width: 80%; height: 60%">
+                                <!-- <p class="text-left" style="margin-left: 20px; margin-top: 10px"><strong>Tidigare uppdrag:</strong><p class="text-left" style="margin-left: 20px; margin-top: 12px">5</p> -->
+                               <div class="row_form">
+                                    <div class="text-left"style="margin-left: 0px ; margin-top:0px; margi-right: 0px; align-items; width:25px"> <strong>Redigera ort:</strong></div>
+                                    <div class="form-group" style="margin-left: 0px ; width: 100px; align-items" ><input class="form-control_edit" type="text" style="margin-top:10px; margin-bottom: 0px;width: 220px; align-items" id="edit_location"></div>
+                               </div>
+                                <div class="text-left"style="margin-left: 0px; margin-top:0px"> <strong>Redigera fö?retagsnamn:</strong></div> 
+                                <div class="form-group"style="margin-left: 0px ; width: 180px" ><input class="form-control_edit" type="text" style="margin-top:10px; width: 220px;margin-bottom: 0px " id="edit_companyname" ></div>
+                                <div class="text-left"style="margin-left: 0px; margin-top:0px"> <strong>Redigera email:</strong></div>
+                                <div class="form-group" style="margin-left: 0px ; width: 180px"><input class="form-control_edit" type="email" name="email" style="margin-top: 10px; margin-bottom:0px; width: 220px" id="edit_email"></div> 
+                                <p  style="display: none; font-size: 12px; color: red; margin-right: 20%; font-color:red;" id="company_email_edit_text"></p>
+
+                                <a class="btn btn-primary" role="button" onclick="updateCompanyProfile()" style="margin-top: 10px; margin-bottom:20px" >Spara</a>
+                          
+                                
+                            </div>
+
+           
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+</script>

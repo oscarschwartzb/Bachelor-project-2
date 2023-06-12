@@ -1,0 +1,40 @@
+<script id="view-companyprofile" type="text/html">
+    <div class="profile-background">
+        <div class="profile_first"></div>
+        <img src={{ url_for( 'static', filename='img/BCG_Corporate_Logo.svg.png' ) }} width="150px" height="150px" style="border-radius:75px">
+        <h1 class="Areaheader" id="company_name"></h1>
+        <a class="btn btn-primary" role="button" onclick="editprofilecompany(); updateEditFormCompany();" style="margin-top: 10px; margin-bottom:20px">Redigera profil</a>
+        <a class="btn btn-primary" role="button" onclick="create_job_company()" style="margin-top: 10px; margin-bottom:20px; margin-left: 1%;">Skapa uppdrag</a>
+        <a class="btn btn-primary" role="button" onclick="showorderhistory();" style="margin-top: 10px; margin-bottom:20px">Orderhistorik</a>
+        <!-- Knapp för orderhistorik, gör med denna vad ni vill-->
+
+
+        <div class="container-fluid" id="job-slider">
+            <!-- <div class="container" style="height: 780px"> -->
+
+            <div class="row" id="informationdiv" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding: -72px; background-color:Gainsboro;border-radius: 15px; ">
+                <div class="col_student" id="company-job-card-div" style="float: left; width: 55%;  background-color:WhiteSmoke; border-radius: 15px; margin-left:25px; margin-top:20px; margin-bottom:20px; overflow:scroll; height:530px">
+                    <!-- vill vi att gamla arbeten också ska finnas eller bara aktiva? -->
+                    <h1 class="text-center" style="margin-top: 40px; margin-bottom: 0px; font-size: 35px">Utlagda uppdrag</h1>
+                </div>
+                <div class="col_student" style="float:left; width:35%; background-color:WhiteSmoke; border-radius: 15px;  margin-left:50px; margin-top:20px; margin-bottom:20px; height:60%">
+                    <div id="companyinfoinner" style="margin: 10px">
+                        <div id="company_info_header_icon">
+                            <h2> Om Företag</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p id ="amount-jobs" class="text-left" style="margin-left: 0px; margin-top: 10px;"><strong></strong>
+                                    <div class="text-left" style="margin-left: 0px ; margin-top:25px" id="ort_edit"> <strong></strong></div>
+                                    <!-- <div class="text-right"style="margin-left: 0px; margin-top:25px"> <strong>Bransch:</strong></div> -->
+                                    <div class="text-left" style="margin-left: 0px; margin-top:25px" id="email_company"> <strong></strong></div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+
+
+                            
+                        </div>
+</script>

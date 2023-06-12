@@ -1,0 +1,51 @@
+<script id="view-create_job_company" type= "text/html">
+    <div class= "profile-background">
+        <div class="profile_first"></div>
+            <img src={{ url_for('static', filename='img/BCG_Corporate_Logo.svg.png') }} width="150px" height="150px" style="border-radius:75px">
+            <h2 class="text-center">Skapa jobb</h2>
+            
+           <div class="container-fluid" id = "job-slider">
+            <div class="row" id = "informationdiv" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding: -72px; background-color:Gainsboro;border-radius: 15px; ">
+                    <div class="container">
+                        <h2 class="text-center" style="font-size: 15px; margin-top: 10px;">Att lägga ut ett konsultjobb kostar 400kr. </h2>
+                            <h2 class="text-center" style="font-size: 15px; margin-top: 0px;">Du kommer till betalning genom att trycka på knappen "Ladda upp jobb".</h2>
+   
+                    <form method="post">
+                    <!-- Vill vi kunna ladda upp en bild p�� jobbkortet? -->
+                        <h2 class="text-center" style="font-size: 15px ; margin-top: 2%">Titel</h2>
+                        <input class="form-control" type="text" placeholder="Titel" style="margin: 0px; margin-left: 20%;width: 60%;" id="new_job_title">
+                        <h2 class="text-center" style="font-size: 15px ; margin-top: 2%;">Arbetsbeskrivning</h2>
+                      
+                         <div class="popup"  id="info_icon" onclick="popFunction()"> <svg xmlns="http://www.w3.org/2000/svg" id="icon_fill" width="30" height="30" fill="#2e9cca" class="bi bi-question-circle-fill" viewBox="0 0 16 16" >
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                            <span class="popuptext" id="myPopup" > 
+                                I arbetsbeskrivningen är det bra att informera studenterna om:
+                                <br>-Hur rollen är formad.
+                                <br>-Vem ni söker.
+                                <br>-Hur länge.  
+                                <br>-Deltid/Heltid.  
+                                <br>-Sista ansökningsdagen.</span>  
+                        </svg></div>
+
+
+
+                        <textarea class="form-control" maxlength="2000" id="new_job_description" rows="8" placeholder="Arbetsbeskrivning"  
+                        style="margin: 0px; margin-left: 20%; overflow:scroll; height:230px margin-top: 15px; width: 60%;" ></textarea>
+                        <!-- <input class="form-control" type="textarea" placeholder="Arbetsbeskrivning" rows="4" style="margin: 0px; height: auto;" id="new_job_description"> -->
+                        <h2 class="text-right" style="font-size: 10px; margin-right: 20%">(max 2000 tecken)</h2>
+                        <h2 class="text-center" style="font-size: 15px ; margin-top: 2%">Plats</h2>
+                        <input class="form-control" type="text" placeholder="Plats" style="margin: 0px; width: 60%; margin-top: 0px; margin-left: 20%" id="new_job_location">
+                        <div class="form-group">
+                            <h2 class="text-center" style="font-size: 15px ; margin-top: 2%">Under vilken/vilka perioder utspelas jobbet:</h2>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" id="new_job_autumn"><label class="form-check-label" for="formCheck-1">Hösttermin</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" id="new_job_spring"><label class="form-check-label" for="formCheck-2">Vårtermin</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" id="new_job_summer"><label class="form-check-label" for="formCheck-3">Sommartermin</label></div>
+                        </div>
+                        <div class="form-group"><button class="btn btn-primary" type="button" id="create_job" onclick= "savejob();" style="background: var(--blue);">Ladda upp jobb</button></div>
+                    </form>
+                </div>
+            <!-- </div> -->
+        </div>
+        </div>
+    </div>
+</script>

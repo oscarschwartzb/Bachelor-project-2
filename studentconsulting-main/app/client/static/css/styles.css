@@ -1,0 +1,974 @@
+/* Student profil CSS-----------------------*/
+
+.btn-primary {
+  background-image: -webkit-linear-gradient(top, #2e9cca 0%, #2e9cca 100%);
+  background-image: -o-linear-gradient(top, #2e9cca 0%, #2e9cca 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2e9cca), to(#2e9cca));
+  background-image: linear-gradient(to bottom, #2e9cca 0%, #2e9cca 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4688ec', endColorstr='#4688ec', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #2e9cca;
+  border-radius: 6px;
+}
+.btn-primary:hover{
+  background-color:  #29648a;
+  border-color: #29648a;
+}
+
+.profile-background{
+  text-align: center;
+  margin-bottom:15px;
+  border:1px saddlebrown;
+}
+
+#col_student_div{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.profile_first{
+  background-image:  url("mypage-background.jpeg");
+  background-attachment: fixed;
+  height: 300px;
+  margin-bottom: -120px;
+  background-size: cover;
+  background-position-y: -300px;
+  
+}
+
+.informationdiv{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  width: 80%;
+  overflow: scroll;
+  height: 463px; /*  två stycken anonser */
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+@media (max-width: 1000px){
+  .informationdiv{
+    width: 100%;
+  }
+}
+/* ----------------------------------------- */
+
+/* -------Om oss-sida CSS------------------- */
+
+/* Övre rubrik för personer på Om oss-sidan */
+.Areaheader {
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+/* Lägre rubrik för personer på Om oss-sidan */
+.lower-header {
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  bottom: 0px;
+  font-weight:lighter;
+}
+
+@media (max-width:767px) {
+  .lower-header {
+  display: none;
+  }
+}
+
+/* Kolumner för personer i Om oss */
+.col-personer {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  position: relative;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Rad för personerna i Om oss */
+.row-personer {
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+/* Rad för personerna i Om oss */
+.row-personer {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+
+/* Om du vill t.ex. ändra marginal dvs hur långt över och under nästa sak ska börja kan du skapa en id tagg i html
+ och kalla på den här */
+#email_register {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  #register_name {
+    margin-bottom: 10px;
+  }
+  #drop_down_register {
+    justify-content: center;
+  }
+ 
+  #password_r {
+    margin-bottom: 10px;
+  }
+
+  #password {
+    margin-bottom: 10px;
+  }
+
+  #c_name{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #c_name, #s_firstname {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #c_firstname, #s_lastname, #s_password, #s_password_r, #s_email, #s_education, #s_location{
+
+    margin-bottom: 10px;
+  }
+
+  #c_lastname{
+    margin-bottom: 10px;
+  }
+
+  #c_email, #c_location{
+    margin-bottom: 10px;
+  }
+
+  #c_password {
+    margin-bottom: 10px;
+  }
+
+  #c_password_r {
+    margin-bottom: 10px;
+  }
+
+  .register-photo .image-holder_space {
+    display: table-cell;
+    width: auto;  
+  }
+
+  #drop_down_register {
+    font-size: 30px;
+    font-weight: bold;
+
+  }
+
+ /* ----------CSS för jobview------------ */
+  
+#Filtrerauppdragcontainer{
+    justify-content: center;
+    align-items:center;
+    margin:0px;
+    background-color: white;
+    border-color: #9ca4aa;
+    border: 2px;
+    width: 40%;
+    background-color: rgb(184, 219, 150);
+}
+
+.form-check{
+  margin-left: 5px;
+  margin-right: 30px; 
+}
+
+.dropdown_jobbvy{
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+#info_icon{
+  display: flex;
+  justify-content:center;
+  align-items:baseline;
+}
+#icon_fill:hover{
+  
+  /* display: flex;
+  justify-content:center;
+  align-items:baseline; */
+  fill: lightskyblue;
+}
+
+.popup{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.popup:hover .popuptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #2e9cca;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 8px;
+  position: absolute;
+  z-index: 1;
+  font-size: 15px;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+
+
+#filterbutton{
+  margin: 0px;
+  background-color: #2e9cca;
+  border: 4px #2e9cca;
+  color:   #fafdff;
+  width: 100%;
+}
+
+#filterbutton:hover{
+  margin: 0px;
+  background-color: #29648a;
+  border: 2px #29648a;
+  color:   #fafdff;
+}
+
+#row_text-left{
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+#row_features{
+  background-color: white;
+  margin: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+}
+
+#location-div{
+  height: 80px;
+  overflow: scroll;
+}
+
+#filterknapp{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 40px;
+    position: relative;
+    z-index: +3;
+}
+
+#header-jobpage{
+  height: 400px; 
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-image:url("searchmountain.jpeg");
+  background-size: cover;
+  filter: blur(0px);
+  /* background-attachment: fixed; */
+  background-position: center bottom 40%;
+}
+
+/* ---------------------- */
+
+/*  */
+
+.button_ss {
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+  padding: 6px 50px;
+  border: 1px solid #f1f3f5;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 14px;
+  outline: none;
+  color:   #fafdff;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(12, 7, 7, 0.37);
+  text-transform: uppercase;
+  font-family: 'Font-Awesome', sans-serif;
+  font-weight: 700;
+}
+
+.button_ss:hover {
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+  padding: 6px 50px;
+  border: 1px solid #f1f3f5;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  outline: none;
+  color:   #fafdff;
+  background-color: rgba(245, 236, 236, 0.336);
+  text-transform: uppercase;
+  font-family: 'Font-Awesome', sans-serif;
+  font-weight: 700;
+}
+
+.button_white {
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+  padding: 6px 50px;
+  border: 1px solid   #fafdff;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 14px;
+  outline: none;
+  color:   #fafdff;
+  background-color: rgba(12, 7, 7, 1); 
+  /* how to center object */
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* background: transparent; */
+  text-transform: uppercase;
+  font-family: 'Font-Awesome', sans-serif;
+  font-weight: 700;
+}
+
+.button_white:hover {
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+  padding: 6px 50px;
+  border: 1px solid   #fafdff;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 14px;
+  outline: none;
+  color:   #fafdff;
+  background-color: rgba(12, 7, 7, 0.2); 
+  /* background: transparent; */
+  text-transform: uppercase;
+  font-family: 'Font-Awesome', sans-serif;
+  font-weight: 700;
+}
+
+#name_student{
+  color:   #ffffff; 
+  text-transform: uppercase;
+  font-size: 60px;
+  align-content: center;
+}
+
+#edit_profile_button{
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
+}
+
+#save_edit_student{
+  margin-top: 30px;
+  top: 50%;
+  left: 13%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
+}
+
+#annonserdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 80%;
+    overflow: scroll;
+    height: 580px; /*  två stycken anonser */
+}
+
+#jobcontainer{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+#Jobview_jobcard{
+    margin-top: 10px;
+    margin-bottom:15px;
+}
+
+.filter-col{
+  margin: 5px;
+}
+
+#apply-filter-div{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+#roundedsinglejobcard h2{
+  font-size: 25px; 
+}
+
+#roundedsinglejobcard{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0 0 0 0;
+  border: solid thin lightgray;
+}
+
+#roundedsinglejobcard-img{
+  width: 100%;
+  height: 60%;
+  background-image: url("jobcard-image.jpg");
+  background-size:cover;
+}
+
+#roundedsinglejobcard-text{
+  height: 40%;
+  width: 100%;
+  background-color: white;
+  overflow: scroll;
+}
+
+#roundedsinglejobcard-text svg{
+  margin-left: 10px;
+}
+
+@media (max-width: 1000px){
+  #annonserdiv{
+    width: 100%;
+  }
+}
+
+/* CSS vy för jobbkort*/
+#single-jobcard{
+  width: 100%;
+  height: 100%;
+  background-image:url("jobpage-header.jpg");
+  background-size: cover;
+  filter: blur(0px);
+  background-attachment: fixed;
+  width: 100%;
+  overflow:auto;
+}
+
+#jobcard-header{
+  display: flex;
+  justify-content: left;
+  align-items:center;
+  background-size: cover;
+  filter: blur(0px);
+  background-attachment: fixed;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#first-header{
+  color:black;
+}
+
+#companyinfo{
+  background-color: WhiteSmoke;
+  margin: 15px;
+  margin-right: 20px;
+  display: flex;
+  justify-content:left;
+  align-items:flex-start;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#appliedinfo{
+  max-height: 600px;
+  background-color: WhiteSmoke;
+  margin: 15px;
+  margin-right: 20px;
+  display: flex;
+  justify-content:left;
+  align-items:flex-start;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#companyinfoinner{
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  position: relative;
+  z-index: +3;
+}
+
+#company_info_header_icon{
+  display: flex;
+  justify-content:left;
+  align-items:baseline;
+  margin-bottom: 10px;
+}
+
+
+
+#jobcard-bottomdiv{
+  margin: 15px;
+}
+
+#text-jobcard-header{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  width: 80%;
+}
+
+#innertextbox{
+  margin: 15px;
+  width: 75%;
+  height: 600px; 
+  background-color: WhiteSmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#jobdescriptiontext{
+  overflow: scroll;
+  height: 60%;
+  display: flex;
+  justify-content:left;
+  align-items:flex-start;
+  border-top-color: lightgray;
+  border-top-style: solid;
+}
+
+#outertextbox{
+  display: flex;
+  justify-content:left;
+  align-items:flex-start;
+  width: 80%;
+  height: 75%;
+  margin: 5px;
+  border-radius: 24px;
+}
+
+#outer-text-company{
+  display: flex;
+  justify-content:center;
+  align-items:flex-start;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+#outer-single-jobcard{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+#jobbkortheadertext{
+  color: #fff;
+}
+
+@media (max-width: 1050px){
+  #outertextbox{
+    width: 100%;
+
+  }
+
+  #text-jobcard-header{
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px){
+  #companyinfo{
+    visibility:hidden;
+    width:0px;
+    height:0px;
+  }
+  #innertextbox{
+    width: 100%;
+    margin-right: -20px;
+  }
+}
+
+
+/* SLUT CSS vy för jobb kort */
+
+/* Mer CSS för förstasidan */
+#containerReal{
+  width: 100%; 
+  margin-top: 70px; 
+}
+
+.albinContainer{
+  width: 100%; 
+  height: fit-content; 
+}
+
+.jumbotron{
+background-size: cover;
+}
+
+.job-container{
+
+  height: 100%; 
+  width: 30%; 
+}
+
+.scrolling-wrapper{
+  overflow-x: auto; 
+  cursor: grab;
+}
+
+.subtitle{
+font-size: 1.25em;
+opacity: 0.65;
+}
+
+.card-block{
+height: 250px;
+background-color: #fff;
+border: none;
+background-position: center;
+background-size: cover;
+transition: all 0.2s ease-in-out !important;
+border-radius: 24px;
+}
+
+.card-block:hover{
+  transform: translateY(-5px);
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.card div {
+  margin-top: 10px; 
+  margin-left: 10px; 
+}
+
+#job-slider{
+  width: 100%; 
+}
+
+#nav-container{
+display: flex; 
+justify-content: space-between;
+width: 100%; 
+height: 40px; 
+}
+
+#dropdown-container{
+display: flex; 
+flex-direction: column;
+justify-content: center;
+}
+
+#first-header{
+margin-top: -20px; 
+}
+
+.firstpage-paragraph{
+margin-top: -40px;
+}
+
+#frontpage-reviews{
+position: relative; 
+display: flex; 
+justify-content: center;
+width: 100%; 
+height: 70px; 
+margin-top: -65px; 
+z-index: +3;
+}
+
+#frontpage-reviews-container{
+display: flex; 
+justify-content: space-evenly;
+align-items: center;
+height: 100%; 
+width: 75%; 
+background-color: white;
+box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 4px 0 rgba(0, 0, 0, 0.19);
+border-radius: 5px; 
+}
+
+.div-review-style{
+display: flex; 
+flex-direction: row; 
+justify-content: space-between; 
+width: 180px; 
+height: 100%; 
+align-items: center; 
+}
+
+.header-review-style{
+display: flex; 
+flex-direction: column; 
+justify-content: center; 
+height: 100%; 
+margin-top: 40px; 
+}
+
+.checked {
+color: orange;
+}
+
+.frontpage-reviews-container-container{
+display: flex; 
+/* background-color: yellowgreen; */
+flex-direction: column;
+justify-content: space-evenly;
+height: 80%; 
+
+
+}
+
+.frontpage-stars-container{
+margin-top: -28px; 
+}
+
+progress {
+border: none;
+width: 400px;
+height: 20px;
+background: crimson;
+}
+
+progress {
+color: lightblue;
+}
+
+progress::-webkit-progress-value {
+background: orange;
+}
+
+progress::-webkit-progress-bar {
+background-color: rgb(250, 212, 140); 
+}
+
+/* Ser till att förstasidan blir responsiv */
+@media (max-width: 1000px){
+  .features-clean{
+      display: flex; 
+      justify-content: space-between;
+      flex-direction: column;
+      height: 500px; 
+  }
+
+}
+
+@media (max-width: 1200px){
+
+  #frontpage-reviews{
+    visibility: hidden;
+  }
+}
+
+/* ändrade Bootraps klass för kolumner */
+.col-6{
+  max-width: 100.5%;
+}
+
+
+body{
+  font-family: 'Noto Sans TC', sans-serif;
+  color:rgb(10, 10, 48)
+}
+
+
+.custom-file-label {
+  text-align: left;
+}
+
+#myModal {
+  z-index: 10000!important;
+  margin-top: 45px;
+}
+
+
+/* Albins ändringar mypage */
+.mypage-background{
+
+  background-color:whitesmoke; 
+  width: 100%; 
+  height: 600px; 
+  border-top: solid thin gainsboro; 
+  display: flex; 
+  justify-content: space-between;
+  flex-direction: row;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
+
+.about-student{
+
+  height: fit-content;
+  line-height: 1;
+  width: 100%;
+  
+
+}
+
+
+.text-left{
+
+  width: 100%; 
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 10px; 
+
+}
+
+
+.text-left p{
+  margin-bottom: 5px;
+}
+
+.profile-picture{
+
+  width: 150px;
+  height: 150px;
+  border-radius:75px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,.1); 
+  border: solid thin white;
+  vertical-align: middle;
+}
+
+
+.mypage-holder{
+
+  display: flex; 
+  justify-content: start;
+  flex-direction: column;
+  width: 50%;  
+  background-color:White; 
+  border-radius: 15px; 
+  margin-top:20px; 
+  margin-bottom:20px; 
+  height:530px;
+  margin-left: 25px;
+  
+}
+
+
+#cv-container{
+  width: 90%; 
+  height: 80%; 
+  background-color: red; 
+  align-self: center; 
+  background-size: center;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  cursor: pointer;
+
+
+}
+
+
+
+#cv-embed{
+  width: 100%; 
+  height: 100%;
+  outline: none; 
+  pointer-events: none;
+
+
+}
+
+
+#about-cv-container{
+
+  display: flex; 
+  justify-content: center;
+  flex-direction: row;
+  
+
+} 
+
+#about-container{
+
+  background-color: red;
+}
+
+#header-cv-container{
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+  height: 100%; 
+  width: 40%;
+
+} 
+
+/* #companyinfoinner{
+  max-height: 600px;
+} */
+
+#applied-div{
+  max-height: 525px;
+  overflow: scroll;
+}
+
+.orderhistory-job{
+  overflow: scroll;
+  max-height: 350px;
+}
+
+/* CSS för order historik */
+.orderhistory-single-job{
+  border-bottom: solid thin lightgray;
+}
+
+.orderhistory-single-job-inner{
+  margin: 10px;
+}
+

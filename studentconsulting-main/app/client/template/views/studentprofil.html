@@ -1,0 +1,104 @@
+<!-- Vy för studentprofil -->
+<script id="view-studentprofil" type="text/html">
+  <div
+    class="profile-background"
+    style="background-image: linear-gradient(WhiteSmoke, White);"
+  >
+    <div class="profile_first"></div>
+    <img class = "profile-picture" src={{ url_for('static',
+    filename='img/oscar.JPG') }} width="150px" height="150px"
+    style="border-radius:75px; box-shadow: 0 4px 8px rgba(0,0,0,.1); border:
+    solid thin white;">
+    <h1 class="Areaheader" id="student_name"></h1>
+    <a
+      class="btn btn-primary"
+      role="button"
+      onclick="editprofilestudent(); updateEditForm();updateUserPreviewModal(); studentAppliedJobs.hide()"
+      style="margin-top: 10px; margin-bottom:20px"
+      >Redigera profil</a
+    >
+    <div
+      class="container-fluid"
+      id="job-slider"
+      style="padding-right: 0px; padding-left: 0px;"
+    >
+      <!-- <div class="container" style="height: 780px"> -->
+      <div class="mypage-background">
+        <div class="mypage-holder" id="studentAppliedJobs" style = "overflow: scroll;">
+          <h1
+            class="text-center"
+            style="margin-top: 10px; margin-bottom: 0px; font-size: 35px"
+          >
+            Sökta uppdrag
+          </h1>
+        </div>
+
+        <div class="mypage-holder" id = "about-cv-container">
+          <div id = "header-cv-container" >
+          <h1 class="text-center" style=" height: 20px;">CV</h1>
+
+          <div data-toggle="modal" data-target="#myModal" id="cv-container" onclick = "updateUserPreviewModal()">
+
+         
+          </div>
+          <!-- Modal pdf-preview -->
+          <div
+            id="myModal"
+            class="modal fade"
+            role="dialog"
+            data-backdrop="false"
+          >
+            <div class="modal-dialog modal-lg">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                </div>
+                <div class="modal-body" id="preview-pdf-modal">
+                  <!-- embed file goes here, done done with updateUserPreviewModal() in file_handle.js -->
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+          <div class="row" id = "about-container">
+            <div class="col" style="margin-left: 50px; margin-top: 80px; height: 200px; border: solid thin lightgray;">
+              <p class="text-left" style="margin-left: 0px; margin-top: 10px">
+                <strong>Tidigare uppdrag:</strong>
+              </p>
+              <div
+                class="text-left"
+                style="margin-left: 0px ; margin-top:25px"
+                id="student_education"
+              >
+                <strong></strong>
+              </div>
+              <div
+                class="text-left"
+                style="margin-left: 0px; margin-top:25px"
+                id="student_location"
+              >
+                <strong></strong>
+              </div>
+              <div
+                class="text-left"
+                style="margin-left: 0px; margin-top:25px"
+                id="student_email"
+              >
+                <strong></strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</script>

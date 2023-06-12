@@ -1,0 +1,16 @@
+<!-- Vy för betalning -->
+<script id="view-payment" type= "text/html">  
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method="post">
+                    <h2 class="text-center"><strong>Betalning</strong></h2>
+                    <div class="form-group"><input class="form-control" type="text" placeholder="Kortinnehavare"></div>
+                    <div class="form-group"><input class="form-control" type="text" placeholder="Kortnummer"></div>
+                    <div class="form-group"><a class="btn btn-primary btn-block" role="button" onclick="paymentconfirmation()" style="background: var(--blue);">Betala</a></div>
+                    <div class="form-group"><a class="btn btn-primary btn-block" role="button" onclick=abortpayment() style="background: var(--blue);">Abryt betalning</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</script>

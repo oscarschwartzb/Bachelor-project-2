@@ -1,0 +1,68 @@
+<script id="view-jobpage" type= "text/html"> 
+  <div id="header-jobpage">
+    <h1 Style="color:whitesmoke; text-shadow: 0px 0px 20px black;">Tillgängliga konsultjobb</h1>
+  </div>   
+        <div class="container">
+            <div class="row text-left" id = "row_text-left">
+                <div  id = "Filtrerauppdragcontainer" >
+                    <div id = "filterknapp">
+                        <button type="button" id="filterbutton" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="width:100%; height:100%; margin:0px;" onclick="showfilter()">
+                          Visa/Dölj Filter
+                        </button>
+                    </div>
+                      <div class="collapse" id="collapseExample">
+                        <div >
+                            <div class = "row features" id="row_features" Style= "height: 0 px; margin: 0px">
+                                <div class = "filter-col" Style = "color: #25274d">
+                                    <h5><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#25274d" class="bi bi-calendar-week-fill" viewBox="0 0 16 16">
+                                        <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM9.5 7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm3 0h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zM2 10.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                                        </svg> Termin</h5> 
+                                <div style= "background: white">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="CheckAutumn">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                      Höst
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="CheckSpring" >
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                      Vår
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="CheckSummer" >
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                      Sommar
+                                    </label>
+                                  </div>
+                                </div>
+                            </div>
+
+                                <div class = "filter-col" Style = "color: #25274d"> 
+                                    <h5><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#25274d" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                        </svg> Ort</h5> 
+
+                                        <div id="location-div">
+                                </div> 
+                                </div>
+                            </div>
+                            <div id = "apply-filter-div"> 
+                                <button type="button" id="filterbutton" onclick="filterjobs()" style="width:100%; height:100%">
+                                    Filtrera
+                                  </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--   <div class="container" id ="jobcontainer"> -->
+    <div id="jobcontainer">
+        <div class="row" id="annonserdiv" style="padding: -72px;">
+        </div>
+    </div>
+    <!--  </div> -->
+</script>

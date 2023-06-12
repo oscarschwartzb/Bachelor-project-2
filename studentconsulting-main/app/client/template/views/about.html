@@ -1,0 +1,90 @@
+<!-- Vy för om oss-sida -->
+<script id="view-about" type="text/html">
+        <div style="margin-top:-10px">
+            <div class="row" style="margin: 80px;">
+            <div class="col-md-6" style="padding-right: 0px; margin-top:80px;
+            padding-left: 0px; background-color: #f9fafd;"> <div style="height: 400px; padding-top: 40px; margin: 0 0 0px 10px; text-align: center;">
+                <h2 style="font-size: 48px; margin-top:-20px">Vår mission</h2>
+                <p style="text-align: left; margin-top:20px">Vår mission är att erbjuda en webbapplikation vars syfte är att skapa länken mellan studenter som är intresserade av extrajobb som konsulter och företag som har ett arbetsprojekt de vill utföra. Vi vill skapa en användarvänlig webbapplikation utifrån både från företagets och studentens perspektiv. </p>
+                <!-- <a class="Omoss" onclick="jobbviewInitiate();">Upptäck uppdrag<a> -->
+            </div>
+            </div>
+
+            <div class="col-md-6" style="padding-right: 0px; margin-top:80px;
+            padding-left: 0px;"> <div style="height: 400px; padding-top: 40px; background: url( {{url_for('static', filename='img/Campus_US.jpg') }} ); background-size: cover;">
+            </div>
+            </div>
+
+            <div class="col-md-6" style="padding-right: 0px;
+            padding-left: 0px;"> <div style="height: 400px; padding-top: 40px; background: url( {{url_for('static', filename='img/Campus-Norrkoping.jpg') }} ); background-size: cover;">
+            </div>
+            </div>
+
+            <div class="col-md-6" style="padding-right: 0px;
+            padding-left: 0px; background-color: #f9fafd;"> <div style="height: 400px; padding-top: 40px; margin: 0 0 0px 10px; text-align: center;">
+                <h2 style="font-size: 48px">Vår vision</h2>
+                <p style="text-align: left">Vår vision är att öka studenters chanser att hitta extrajobb som konsulter, och ge företag möjligheten till smidiga anställningar genom att tillhandahålla en webbapplikation där passande arbetsprojekt finns samlade.</p>
+            </div>
+            </div>
+
+            <div class="col-md-6" style="padding-right: 0px;
+            padding-left: 0px; background-color: #f9fafd;"> <div style="height: 400px; padding-top: 40px; margin: 0 0 0px 10px; text-align: center;">
+                <h2 style="font-size: 48px">Vilka är vi?</h2>
+                <p style="text-align: left">Vi är åtta ambitiösa universitetsstudenter från Linköpings Universitet som studerar tredje året på Industriell Ekonomi där vi har valt att specialisera oss inom datateknik. Industriell ekonomi har en mix av teknik, företagande och management. Vår utbildning ger oss därför god blandning av tekniskt och affärsmässigt kunnande. 
+            </div>
+            </div>
+
+            <div class="col-md-6" style="padding-right: 0px;
+            padding-left: 0px;"> <div style="height: 400px; padding-top: 40px; background: url( {{url_for('static', filename='img/Studenthuset2.jpg') }} ); background-size: cover;">
+            </div>
+            </div>
+
+        </div>
+    </div>
+        
+    <div class="container" id="contain-foto">
+        <h1>Teamet</h1>
+        <div class="row-personer" style="justify-content-center" id="row-foto">
+            <div class="col-personer">
+                <img src= {{ url_for('static', filename='img/adam.jpeg') }} width="100%" style="border-radius:200px">
+                <h1 class="Areaheader">Adam Åström</h1>
+                <h1 class="lower-header">Kommunikation- och dokumentansvarig</h1>
+            </div>
+            <div class="col-personer">
+                <img src= {{ url_for('static', filename='img/albin.jpg') }} width="100%" style="border-radius:200px">
+                <h1 class="Areaheader">Albin Öberg</h1>
+                <h1 class="lower-header">Testansvarig</h1>
+            </div>
+            <div class="col-personer">
+                <img src={{ url_for('static', filename='img/alice.jpeg') }} width="100%" style="border-radius:200px">
+                <h1 class="Areaheader">Alice Elkjaer</h1>
+                <h1 class="lower-header">Gitansvarig</h1>
+            </div>
+            <div class="col-personer">
+                <img src={{ url_for('static', filename='img/fredrik.jpg') }} width="100%" style="border-radius:200px">
+                <h1 class="Areaheader">Fredrik Olsson</h1>
+                <h1 class="lower-header">Back end-ansvarig</h1>
+            </div>
+            <div class="col-personer">
+                <img src={{ url_for('static', filename='img/hannes.jpeg') }} width="100%" style="border-radius:200px">
+                <h1 class="Areaheader">Hannes Bengtsson Malmborg</h1>
+                <h1 class="lower-header">Scrummaster</h1>
+            </div>
+            <div class="col-personer">
+                <img src={{ url_for('static', filename='img/madeleine.jpeg') }} width="100%" style="border-radius:200px">
+                <h1 class="Areaheader">Madeleine Jacobson</h1>
+                <h1 class="lower-header">Front end-ansvarig</h1>
+            </div>
+            <div class="col-personer">
+                <img src={{ url_for('static', filename='img/oscar.JPG') }} width="100%" style="border-radius:200px">
+                <h1 class="Areaheader">Oscar Schwartz-Blicke</h1>
+                <h1 class="lower-header">Design- och utvecklingsansvarig</h1>
+            </div>
+            <div class="col-personer">
+                <img src={{ url_for('static', filename='img/viktor.jpg') }} width="100%" style="border-radius:200px">
+                <h1 class="Areaheader">Viktor Storsved</h1>
+                <h1 class="lower-header">Mötesansvarig</h1>
+            </div>
+        </div>
+    </div>
+</script>

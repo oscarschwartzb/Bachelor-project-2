@@ -1,0 +1,170 @@
+<!-- vy f��r studentprofil n��r vill ��ndra i den version 2 -->
+<script id="view-edit_my_profile" type="text/html">
+  <div class class="profile-background">
+    <div class="profile_first">
+    </div>
+
+
+                <img class = "profile-picture" src={{ url_for('static', filename='img/oscar.JPG') }} style = "display: block; margin-left:auto; margin-right: auto;">
+                <h1 class="Areaheader" id="student_name"></h1>
+
+            <div class="mypage-background" id = "job-slider">
+            <!-- <div class="container" style="height: 780px"> -->
+                <!-- <div class="row" id = "informationdiv" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding: -72px; background-color:Gainsboro;border-radius: 15px; ">
+                    <div class="col_student" style="float: left; width: 55%;  background-color:WhiteSmoke; border-radius: 15px; margin-left:25px; margin-top:20px; margin-bottom:20px; overflow:scroll; height:530px">
+
+                        <h1 class="text-center" style ="margin-top: 40px; margin-bottom: 0px; font-size: 35px">Sökta uppdrag</h1>
+                            <div class="card card-block" style = "background: url({{ url_for('static', filename='img/pexels-fauxels-3183183.jpg') }});border-style: none;box-shadow: 0px 0px;background-size: cover; height: 214px; width:85%; top:20px; left:7%; margin-top: 15px">
+                                <div>
+                                    <h2 style="color: var(--white);">Front-end</h2>
+                                    <p style="color: var(--white);">Vi behöver hjälp med front end</p>
+                                    <a href="#" class="stretched-link" onclick="alert_application()"></a>  
+                                </div>
+                            </div>
+
+
+                        <div class="card card-block" style = "background: url({{ url_for('static', filename='img/pexels-fauxels-3183183.jpg') }});border-style: none;box-shadow: 0px 0px;background-size: cover; height: 214px; width:85%; top:20px; left:7%; margin-top: 15px">
+                            <div>
+                                <h2 style="color: var(--white);">Front-end</h2>
+                                <p style="color: var(--white);">Vi behöver hjälp med front end</p>
+                                <a href="#" class="stretched-link" onclick="alert_application()"></a> 
+                            </div>
+                        </div>
+                      <div class="card card-block" style = "background: url({{ url_for('static', filename='img/pexels-fauxels-3183183.jpg') }});border-style: none;box-shadow: 0px 0px;background-size: cover; height: 214px; width:85%; top:5%; left:7%">
+                        <div>
+                            <h2 style="color: var(--white);">Front-end</h2>
+                            <p style="color: var(--white);">Vi behöver hjälp med front end</p>
+                            <a href="#" class="stretched-link" onclick="alert_application()"></a>  
+                        </div>
+                    </div>
+
+
+                </div> -->
+                <div
+                class="col_student"
+                style="float:left; width:35%; background-color:White; border-radius: 15px;  margin-left:50px; margin-top:20px; margin-bottom:20px; height:40%"
+                >
+                <div id="companyinfoinner" style="margin: 10px">
+                  <div class="row">
+                    <div class="col" style=" width: 80%; height: 60%">
+                      <!-- form for uploading a pdf-file -->
+                      <form enctype="multipart/form-data" id="upload-pdf-form">
+                        <div class="form-group">
+                          <label>Välj CV som pdf-fil för att ladda upp</label>
+                          <div class="custom-file">
+                            <input
+                              oninput="showUploadFilename(this);filesize(this);bindSubmitPDF();"
+                              type="file"
+                              class="custom-file-input"
+                              name="pdf"
+                              id="pdf"
+                            />
+                            <label
+                              class="custom-file-label"
+                              for="pdf"
+                              id="file-name-input"
+                              >Ingen fil vald</label
+                            >
+                          </div>
+                        </div>
+                        <!-- following form submit button should perhaps be merged with "spara" -->
+                        <button class="btn btn-primary">Ladda upp CV</button>
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          onclick="deleteFile()"
+                        >
+                          Ta bort CV
+                        </button>
+                      </form>
+                      <!-- button to view the modal window with pdf-file preview -->
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-toggle="modal"
+                        data-target="#myModal"
+                        id="upload-pdf-modal-button"
+                        style = "margin-top: 5px;"
+                      >
+                        Visa CV
+                      </button>
+                      <!-- Modal pdf-preview -->
+                      <div id="myModal" class="modal fade" role="dialog" data-backdrop="false">
+                        <div class="modal-dialog modal-lg">
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                              >
+                                &times;
+                              </button>
+                            </div>
+                            <div class="modal-body" id="preview-pdf-modal">
+                              <!-- embed file goes here, done done with updateUserPreviewModal() in file_handle.js -->
+                            </div>
+                        </div>
+                      </div>
+
+                      
+                      <!-- Modal pdf-preview end -->
+                      <a class="btn btn-primary" role="button">Spara</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+                    <div class="col_student" style="width:35%; background-color:White; border-radius: 15px; margin-left:10px; margin-top:20px; margin-bottom:20px;">
+                        <div id = "companyinfoinner" style = "margin: 10px">
+                            <div id= "company_info_header_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
+                                    <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                  </svg>
+                              <h2 > Om student</h2>
+                            </div>
+
+                            <div class="about-student" id = "about-student">
+
+                                <div style="width: 100%; height: 60%;">
+                                    <!-- <p class="text-left" style="margin-left: 20px; margin-top: 10px"><strong>Tidigare uppdrag:</strong><p class="text-left" style="margin-left: 20px; margin-top: 12px">5</p> -->
+                                        <div class="text-left"> <p>Redigera utbildning:</p></div>
+                                        <div class="form-group" style="margin-left: 0px ; width: 100px; align-items" ><input class="form-control_edit" type="text" placeholder="Utbildning" style="margin-top:10px; margin-bottom: 0px;width: 220px; align-items" id="utbildning_edit_student"></div>
+                                        <div class="text-left"> <p>Redigera förnamn:</p></div>
+
+                                        <div class="form-group" style="margin-left: 0px ; width: 100px; align-items" ><input class="form-control_edit" type="text" placeholder="Förnamn" style="margin-top:10px; margin-bottom: 0px;width: 220px; align-items" id="fistname_edit_student"></div>
+
+                                        <div class="text-left"> <p>Redigera efternamn:</p></div>
+
+                                        <div class="form-group" style="margin-left: 0px ; width: 100px; align-items" ><input class="form-control_edit" type="text" placeholder="Efternamn" style="margin-top:10px; margin-bottom: 0px;width: 220px; align-items" id="lastname_edit_student"></div>
+                                    <div class="text-left"> <p>Redigera studieort:</p></div>
+                                    <div class="form-group"style="margin-left: 0px ; width: 180px" ><input class="form-control_edit" type="text" style="margin-top:10px; width: 220px;margin-bottom: 0px " id="studieort_edit_student"></div>
+
+                                    <div class="text-left"> <p>Redigera email:</p></div>
+                                    <div class="form-group" style="margin-left: 0px ; width: 180px"><input class="form-control_edit" type="email" name="email" placeholder="Email" id="email_edit_student" style="margin-top: 10px; margin-bottom:0px; width: 220px"></div>
+                                    <a class = "text-left" data-toggle="modal" data-target="#myModal" id="upload-pdf-modal-button">CV</a>
+                                    <a class = "text-left">Personligt brev</a>
+                                    <br><a class="btn btn-primary" role="button" onclick= "updateStudentProfile();" style="margin-top: 10px; margin-bottom:20px; margin-left: 10px;" >Spara</a>
+
+                                
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                <!-- </div> -->
+
+            </div>
+          </div>
+
+  </div>
+</script>
